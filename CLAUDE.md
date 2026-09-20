@@ -43,3 +43,26 @@ was a speaker lead; it is not, once a microphone and its cable are in the box.
 **The lamps.** Nothing else in the design depends on which lamp is chosen and
 nothing gets built until one is in hand. Buy two or three candidate 12 V lamps,
 light them behind a prism panel sample, and look. Measure, don't model.
+
+## Decided 2026-09-20 — the lamps are bare LEDs, not C7 retrofits
+
+1 W emitters on 20 mm stars, 4 red / 4 green / 4 blue, run at **100 mA** (not
+the rated 350 mA). Red is 4S, green and blue are 2S2P, because four blue in
+series does not fit under 12 V. Full table and the ballast values in
+`docs/LAMPS.md`. **The resistor values there are datasheet-typical and must be
+re-computed against measured Vf before ordering in quantity.**
+
+This reversed the early "LED lamps that look like C7s" choice. Three reasons,
+all in `docs/TRAPS.md`: a retrofit bulb hides a driver that may refuse PWM; a
+faceted bulb is a diffuse source and blurs the starburst; and the bulbs sit
+behind the lens where nobody ever sees them.
+
+## The front lens — buy A and C, decide at the bench
+
+OPTIX **1A20083A Prismatic** ($17.98, coarse 3/16 in pyramids) is the starburst
+optic. **1A90001A Micro Prism Glaze** ($15.98) is glare-control texture and will
+glitter instead. **1A00702A Prisma Square** rejected — a second superimposed
+grid competes with the star. Details and the store stock in `docs/LENS.md`.
+
+**Do not fix cabinet depth yet.** Star size is set by the lamp-to-lens gap;
+mount the LED plate on adjustable standoffs and find it by eye.
