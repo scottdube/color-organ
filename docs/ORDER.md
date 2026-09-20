@@ -94,3 +94,17 @@ free and thermally fine, but it is three resistors per position.
 the swatch defaults are not consistent — check the Size selector on each page
 before adding to cart. 3 W parts want real heatsinking for output we throw
 away inside a wooden box.
+
+## Why 60 LEDs for a 12-lamp panel
+
+**12 are used: 4 red, 4 green, 4 blue.** 20 per colour is the pack size, not a
+choice — it is the smallest the seller offers pre-wired on stars.
+
+The spares earn their keep in one specific way: **Vf matching**. Each channel is
+2S2P, two parallel strings with separate ballasts, so a Vf difference between
+strings appears as a brightness difference between pairs of lamps. Picking the
+4 closest out of 20 makes the channel even. With exactly 4 you take what you get.
+
+**Do NOT double up two LEDs per lamp position to get more brightness.** Two
+emitters a few mm apart throw two offset stars through the prism instead of one
+clean one. The 1 mm die is the whole point.
