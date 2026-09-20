@@ -49,7 +49,7 @@ Single 12 V rail, everything referenced to a 6 V mid-rail.
 | Decay | jumpers | 0.1 uF fixed (~10 ms); +1 uF (~110 ms); +4u7 (~480 ms); across 100k | — |
 | Triangle | relaxation oscillator | ~1 kHz, window trimmed to envelope range | — |
 | PWM x3 | LM339 + 2k2 pull-up | — | — |
-| Output x3 | N-channel MOSFET | IRLZ44N or equiv, ~300 mA worst case, no heatsink | — |
+| Output x3 | N-channel MOSFET | IRLZ44N or equiv, 200 mA, no heatsink | — |
 
 **The bold capacitors go in sockets.** They alone set the crossovers, and
 whether the split feels right is a listening judgement that cannot be made on
