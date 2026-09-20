@@ -15,15 +15,23 @@ choice, not price or availability.
 | 1A90000A | Acrylic Micro Prism Frost | 2 x 4 ft | $17.98 | 0 (19 at North Hampton) |
 | 1420083A | "Clear plastic" prismatic (non-acrylic line) | 23.75 x 47.75 | $17.98 | limited |
 
-## Why micro-prism is probably NOT the one
-A micro-prism sheet is fine-pitch optics designed for **glare control** in
-office troffers: it spreads and softens. That is the opposite job. The coarse
-pyramidal **prismatic** (1A20083A) is the pattern that turns a point source into
-a visible cross — the same optic as the 1975 lens.
+## Why micro-prism is NOT the one — observed in the product photos 2026-09-20
+Comparing the three at the same scale settles the pitch question:
 
-**Not measured.** This is optics reasoning from the pattern description, not a
-bench result. All three are $16-18 and in stock at the same store; buy the
-prismatic and the micro-prism glaze, put one LED behind each, and look.
+- **1A20083A Prismatic** — coarse, deep square pyramids, roughly 3/16 in pitch.
+  Classic K12. Big well-defined facets: this is the geometry that refracts a
+  point source into a cross.
+- **1A00702A Prisma Square** — a fine micro-pyramid field with a *superimposed*
+  coarse grid of raised lines. Two competing periods, so it would throw its own
+  lattice pattern on top of any star. Busier than we want.
+- **1A90001A Micro Prism Glaze** — very fine, shallow, uniform micro-pyramids.
+  Glare-control texture. It will glitter, not starburst.
+
+**What is observed vs. what is inferred:** the relative pitch and facet depth
+are observed from the photos. That coarse pitch yields a crisp X *with our
+emitter at our gap* is still inference — it depends on the lamp-to-lens
+distance, which `LAMPS.md` leaves adjustable for exactly this reason. Buy A and
+C, put one LED behind each, and look.
 
 ## Hypothesis, untested: the model prefix encodes the plastic
 Plaskolite titles that say "Acrylic" carry a **1A** prefix; 1420083A is the same
