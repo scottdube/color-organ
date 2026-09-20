@@ -57,12 +57,12 @@ all in `docs/TRAPS.md`: a retrofit bulb hides a driver that may refuse PWM; a
 faceted bulb is a diffuse source and blurs the starburst; and the bulbs sit
 behind the lens where nobody ever sees them.
 
-## The front lens — buy A and C, decide at the bench
+## The front lens — DECIDED: OPTIX 1A20083A Prismatic
 
-OPTIX **1A20083A Prismatic** ($17.98, coarse 3/16 in pyramids) is the starburst
-optic. **1A90001A Micro Prism Glaze** ($15.98) is glare-control texture and will
-glitter instead. **1A00702A Prisma Square** rejected — a second superimposed
-grid competes with the star. Details and the store stock in `docs/LENS.md`.
+$17.98, coarse 3/16 in square pyramids, 23.75 x 47.75, 20 in stock at HD
+Portsmouth as of 2026-09-20. One sheet yields ~10 fronts at 11.5 x 18.
+**Settled — do not re-open it.** Micro Prism Glaze (1A90001A) and Prisma Square
+(1A00702A) were compared and rejected; `docs/LENS.md` keeps the why.
 
 **Do not fix cabinet depth yet.** Star size is set by the lamp-to-lens gap;
 mount the LED plate on adjustable standoffs and find it by eye.

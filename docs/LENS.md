@@ -1,4 +1,7 @@
-# The front lens
+# The front lens — DECIDED: OPTIX 1A20083A Prismatic
+
+**Scott chose A (1A20083A) and it is not an open question.** The comparison
+below is kept as the reason, not as a decision still to make. Do not re-open it.
 
 The 1975 28-4009 ad describes a **prismatic "starburst lens"** and the photo
 shows a distinct X on each of the 12 lamps. So the panel's job is to REFRACT a
@@ -30,8 +33,8 @@ Comparing the three at the same scale settles the pitch question:
 **What is observed vs. what is inferred:** the relative pitch and facet depth
 are observed from the photos. That coarse pitch yields a crisp X *with our
 emitter at our gap* is still inference — it depends on the lamp-to-lens
-distance, which `LAMPS.md` leaves adjustable for exactly this reason. Buy A and
-C, put one LED behind each, and look.
+distance. That is a gap question, not a panel question, and `LAMPS.md` leaves
+the standoffs adjustable to answer it.
 
 ## Hypothesis, untested: the model prefix encodes the plastic
 Plaskolite titles that say "Acrylic" carry a **1A** prefix; 1420083A is the same
