@@ -11,14 +11,15 @@ ESTIMATE carries the +40% house escalator already applied.
 | 2 | Cleiscry 1 W star LED, **Red 625 nm**, 20 pc, pre-wired 15 cm | 1 | $10.99 | **$10.99** | Amazon **B0H984C2BN** |
 | 3 | Cleiscry 1 W star LED, **Green 525 nm**, 20 pc, pre-wired | 1 | $10.99 | **$10.99** | Amazon **B0H988PC77** |
 | 4 | Cleiscry 1 W star LED, **Blue 460 nm**, 20 pc, pre-wired | 1 | $10.39 | **$10.39** | Amazon **B0H986Z3SC** |
-| 5 | 12 V 2 A DC brick, 2.1 mm barrel | 1 | $13 | $13 [ESTIMATE] | — |
-| 6 | Ballast resistors 1 W: 47/51/56/62/68/75/82 R, 10 ea | — | — | $12 [ESTIMATE] | — |
+| ~~5~~ | ~~12 V 2 A DC brick~~ | — | — | **$0 — in stock** | see below |
+| ~~6~~ | ~~Ballast resistors 1 W~~ | — | — | **$0 — buildable from stock** | see below |
 
 All three LED variants confirmed **in stock, "usually ships within 2 to 3
 days"**, prices read directly off each variant page 2026-09-20.
 
-**Panel + LEDs, all verified: $50.35.** With the estimated supply and
-resistors: **~$75**.
+**Total to buy: $50.35.** The supply and the ballast both came out of the
+InvenTree check below, so the two ESTIMATE lines are gone and the build cost is
+now entirely verified.
 
 ### Why these LEDs
 Pre-mounted on a 20 mm star **and** pre-soldered with 15 cm leads — that is 24
@@ -41,9 +42,40 @@ capsule, 4x 10k linear rotary pots, 1N4148s, and the **socketed** crossover
 caps (22 nF, 10 nF, 100 nF, 2n2, 1 nF, 10 nF). Not priced here — these are
 stock-check items first.
 
-## Check InvenTree before buying 5 and 6
-The brick and the 1 W resistors are exactly the kind of thing already on the
-shelf. Worth a stock check before spending $25 on them.
+## InvenTree check — done 2026-09-20, both items covered
+
+Searched the requirement, not a part number (`shop-inventory/scripts/
+color_organ_stock_0920.py`). Full result set printed; nothing capped.
+
+### Supply — on the shelf, buy nothing
+| Part | Stock | Verdict |
+|---|---|---|
+| **PS-009 Power Adapter 12 V 1.5 A, 5.5 x 2.1 C+** — [part 1218](http://192.168.50.10:8001/web/part/1218/) | 1 | **Use this.** 1.5 A against a 0.6 A load, and the barrel is documented: 5.5 x 2.1, centre positive. |
+| Power Adapter 12 V 3 A, model 1230 — [part 1102](http://192.168.50.10:8001/web/part/1102/) | 1 | Alternate. More headroom than needed; barrel not recorded. |
+| S-360-12 Switching PSU 12 V 30 A enclosed — [part 1202](http://192.168.50.10:8001/web/part/1202/) | 1 | **Rejected.** Open-frame with mains terminals. Using it would put mains back in the enclosure, which this project forbids. |
+
+### Ballast — build it from 150R, buy nothing
+The catalogue is almost entirely **1/4 W**, which is not enough for a ballast
+dissipating 0.55-0.73 W. But there are **81x Resistor 150R 1% 1/2W**
+([part 949](http://192.168.50.10:8001/web/part/949/)), and 150R parallels
+straight onto the values we want:
+
+| Need | Build | Each part dissipates | Rating | Qty |
+|---|---|---|---|---|
+| Red, 75 R | **2 x 150R in parallel** = 75 R exactly | 0.37 W | 1/2 W | 4 |
+| Green/Blue, ~56 R | **3 x 150R in parallel** = 50 R | 0.20 W | 1/2 W | 12 |
+
+16 of 81 used. At 50 R instead of 56 R the green/blue strings run ~110 mA
+rather than 98 mA, which is inside the target either way.
+
+**Why this matters more than the $12 saved:** the ballast values cannot be
+final until Vf is measured on the real LEDs. Having 81 x 150R on hand means
+that measure-then-choose step happens at the bench with no order in between —
+1, 2, 3 and 4 in parallel give 150 / 75 / 50 / 37.5 R, which brackets the whole
+plausible range.
+
+**Buy 1 W parts anyway if you want it tidy.** Three resistors per position is
+free and thermally fine, but it is three resistors per position.
 
 ## Deliberately NOT on this list
 - **Cabinet materials.** Depth depends on the lamp-to-lens gap, which is found
