@@ -84,3 +84,15 @@ section is free.
 ### Remaining sheets
 2 bass/mid/treble filters, 3 rectifiers + decay, 4 triangle + PWM,
 5 MOSFET outputs + lamp terminals, 6 front-panel wiring.
+
+## Netclasses agree with the DRC minima -- deliberately
+
+A KiCad project with no `net_settings` gets the built-in Default netclass:
+**track_width 0.2, clearance 0.2**. Against a 0.8 mm DRC minimum that means
+every track routed at the default is a DRC error, on a board with no density
+pressure at all. Default is set to **1.5 mm track / 0.8 mm clearance**, and a
+**POWER** class at **3 mm** picks up `+12V`, `GND` and `LAMP*` by pattern --
+the three channels carry 200 mA each and the common return 600 mA. Wide costs
+nothing when only the boundary is milled.
+
+`sheets` was also empty, so the root sheet was not registered with the project.
