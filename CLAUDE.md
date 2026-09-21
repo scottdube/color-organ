@@ -10,7 +10,9 @@ original actually was, including two candidates that were ruled out.
 
 ## State
 
-Design approved, nothing built. No schematic captured, no board laid out.
+Design approved, nothing built. **KiCad project started 2026-09-20: sheet 1 of
+6 captured and ERC-clean** (0 errors). See `docs/PCB.md` for the milling design
+rules, the capture traps, and what the remaining sheets are.
 
 ## The shape of the thing
 
@@ -47,8 +49,10 @@ light them behind a prism panel sample, and look. Measure, don't model.
 ## Decided 2026-09-20 — the lamps are bare LEDs, not C7 retrofits
 
 1 W emitters on 20 mm stars, 4 red / 4 green / 4 blue, run at **100 mA** (not
-the rated 350 mA). Red is 4S, green and blue are 2S2P, because four blue in
-series does not fit under 12 V. Full table and the ballast values in
+the rated 350 mA). **All three channels are 2S2P** -- four green or blue in
+series does not fit under 12 V, and vendor Vf for red is a RANGE (2.2-2.6 V)
+wide enough that a 4S red string would leave only 1.6 V across the ballast and
+drift against the other eight lamps. Full table and ballast values in
 `docs/LAMPS.md`. **The resistor values there are datasheet-typical and must be
 re-computed against measured Vf before ordering in quantity.**
 
